@@ -21,7 +21,7 @@ function cleanDist() {
 }
 
 function images() {
-  return src('app/images/**/*')
+  return src('app/assets/images/**/*')
     .pipe(
       imagemin([
         imagemin.gifsicle({ interlaced: true }),
@@ -32,11 +32,12 @@ function images() {
         }),
       ])
     )
-    .pipe(dest("dist/images"));
+    .pipe(dest("dist/assets/images"));
 }
 
 function scripts() {
-  return src(["node_modules/jquery/dist/jquery.js", "app/js/main.js"])
+  // return src(["node_modules/jquery/dist/jquery.js", "app/js/main.js"])
+  return src(["app/js/main.js"])
     .pipe(concat("main.min.js"))
     .pipe(uglify())
     .pipe(dest("app/js"))
@@ -80,6 +81,14 @@ function watching() {
   watch(["app/*.html"]).on("change", browserSync.reload);
 }
 
+function deploy() {
+  return ghPages.publish('dist', {
+    branch: 'gh-pages',
+  //   repo: 'https://github.com/tgluk/gulp-start.git',
+    dotfiles: true
+  });
+}
+
 exports.styles = styles;
 exports.watching = watching;
 exports.browsersync = browsersync;
@@ -87,6 +96,6 @@ exports.scripts = scripts;
 exports.images = images;
 exports.cleanDist = cleanDist;
 
-
+exports.deploy = deploy;
 exports.build = series(cleanDist, images, build);
 exports.default = parallel(styles, scripts, browsersync, watching);
