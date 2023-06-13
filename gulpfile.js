@@ -84,7 +84,7 @@ function watching() {
 function deploy() {
   return ghPages.publish('dist', {
     branch: 'gh-pages',
-  //   repo: 'https://github.com/tgluk/gulp-start.git',
+    repo: 'https://github.com/tgluk/lazer-lending.git',
     dotfiles: true
   });
 }
