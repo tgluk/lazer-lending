@@ -1,0 +1,11 @@
+@mixin tablet() {
+  @media (max-width: $breackpoint-md) {
+    @content;
+  }
+}
+
+@mixin mobile() {
+  @media (max-width: $breackpoint-sm) {
+    @content;
+  }
+}

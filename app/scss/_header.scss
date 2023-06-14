@@ -6,8 +6,9 @@
   width: 100%;
   padding: 20px 0;
   background-color: $background-opacity;
-  border-color: transparent;
-  border-style: solid;
+  // border-color: transparent;
+  // border-style: solid;
+  z-index: 99;
 
   .wrapper {
     display: flex;
@@ -15,6 +16,7 @@
     align-items: center;
     max-width: 1200px;
     width: 100%;
+    margin: 0 20px;
 
     .logo {
       display: flex;
@@ -68,6 +70,9 @@
           font-size: 16px;
         }
       }
+    }
+    .burger{
+      display: none;
     }
   }
 }
