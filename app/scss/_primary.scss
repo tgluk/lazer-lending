@@ -67,6 +67,7 @@
         transition: all 0.2s ease-in-out;
         cursor: pointer;
         &:hover {
+          border-color: $color-prime;
           background-color: $color-prime;
         }
       }

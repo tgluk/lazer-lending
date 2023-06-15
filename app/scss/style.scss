@@ -12,3 +12,11 @@
 
 @import './primary';
 @import './primary-media';
+
+@import './choose-us';
+@import './choose-us-media';
+
+body {
+  background-color: $background-body;
+  color: #fff;
+}

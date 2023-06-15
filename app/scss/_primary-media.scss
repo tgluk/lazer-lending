@@ -1,6 +1,31 @@
 @include tablet {
   .primary {
     .wrapper {
+      justify-content: center;
+      margin: 0 20px;
+      .content {
+        min-height: 50vh;
+        justify-content: space-around;
+        padding: 20px 30px;
+        &__title {
+          margin: 10px 0;
+          font-size: 40px;
+        }
+        &__subtitle {
+          font-size: 24px;
+        }
+        &__button {
+          font-size: 22px;
+          width: auto;
+        }
+      }
+    }
+  }
+}
+
+@include mobile {
+  .primary {
+    .wrapper {
       margin: 0 20px;
       .content {
         padding: 20px 30px;
@@ -12,6 +37,7 @@
           font-size: 14px;
         }
         &__button {
+          font-size: 18px;
           width: auto;
         }
       }
