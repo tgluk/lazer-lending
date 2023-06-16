@@ -1,3 +1,9 @@
+@mixin laptop() {
+  @media (max-width: $breackpoint-xl) {
+    @content;
+  }
+}
+
 @mixin tablet() {
   @media (max-width: $breackpoint-md) {
     @content;

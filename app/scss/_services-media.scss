@@ -1,0 +1,46 @@
+@include laptop {
+  .services {
+    .wrapper {
+      .service-container {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        gap: 20px;
+      }
+    }
+  }
+}
+
+@include tablet {
+  .services {
+    .wrapper {
+      .service-container {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+      }
+    }
+  }
+}
+
+@include mobile {
+  .services {
+    .wrapper {
+      .service-container {
+        gap: 10px;
+        .service {
+          gap: 10px;
+          padding: 15px;
+          .number-box {
+            width: 40px;
+            height: 40px;
+            &__number {
+              font-size: 20px;
+            }
+          }
+          &__desc {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -6,6 +6,7 @@
 @import './variables.scss';
 @import './media_breackpoints.scss';
 
+// blocks
 
 @import './header';
 @import './header-media';
@@ -15,6 +16,11 @@
 
 @import './choose-us';
 @import './choose-us-media';
+
+@import './services';
+@import './services-media';
+
+@import './slider';
 
 body {
   background-color: $background-body;

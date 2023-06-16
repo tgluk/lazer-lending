@@ -5,6 +5,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.min.css">
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+  />
   <title>Лазерная резка</title>
 </head>
 <body>
@@ -113,30 +117,65 @@
             <div class="number-box">
               <span class="number-box__number">5</span>
             </div>
-            <p class="service__desc"></p>
+            <p class="service__desc">Сварка, сборка, дробеструйка, покраска изделий</p>
           </div>
           <div class="service">
             <div class="number-box">
               <span class="number-box__number">6</span>
             </div>
-            <p class="service__desc"></p>
+            <p class="service__desc">Изготовление балок переменного сечения</p>
           </div>
           <div class="service">
             <div class="number-box">
               <span class="number-box__number">7</span>
             </div>
-            <p class="service__desc"></p>
+            <p class="service__desc">Сталелитейное и чугунолитейное производство: min вес литья 1кг, max вес литья 3 тонны</p>
           </div>
           <div class="service">
             <div class="number-box">
               <span class="number-box__number">8</span>
             </div>
-            <p class="service__desc"></p>
+            <p class="service__desc">Лазерная, плазменная резка металла</p>
           </div>
         </div>
       </div>
     </section>
+    <section class="slider">
+      <div class="wrapper">
+        <!-- Slider main container -->
+        <div class="swiper">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <img src="./assets/images/slider/slide1.jpg" alt="slide1">
+            </div>
+            <div class="swiper-slide">
+              <img src="./assets/images/slider/slide2.jpg" alt="slide2">
+            </div>
+            <div class="swiper-slide">
+              <img src="./assets/images/slider/slide3.jpg" alt="slide3">
+            </div>
+            <div class="swiper-slide">
+              <img src="./assets/images/slider/slide4.jpg" alt="slide4">
+            </div>
+          
+          </div>
+          <!-- If we need pagination -->
+          <!-- <div class="swiper-pagination"></div> -->
+
+          <!-- If we need navigation buttons -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+
+          <!-- If we need scrollbar -->
+          <!-- <div class="swiper-scrollbar"></div> -->
+        </div>
+      </div>
+    </section>
   </main>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
   <script src="js/main.min.js"></script>
+ 
 </body>
 </html>
