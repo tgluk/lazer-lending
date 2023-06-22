@@ -26,6 +26,14 @@
         border-radius: 4px;
         background-color: $background;
         gap: 20px;
+        transition: all 0.4s ease-in-out;
+        &:hover {
+          border-radius: 4px;
+          background-color: $color-prime;
+          .number-box {
+            background-color: $background;
+          }
+        }
         .number-box {
           display: flex;
           justify-content: center;
