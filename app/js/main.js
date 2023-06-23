@@ -1,10 +1,6 @@
-  // core version + navigation, pagination modules:
-// import Swiper, { Navigation, Pagination } from 'swiper';
-//   // import Swiper and modules styles
-// import 'swiper/css';
-// import 'swiper/css/navigation';
-// import 'swiper/css/pagination';
-let screenWidth
+// slider
+
+let screenWidth // переменная для расстояния между слайдами в зависимости от размера экрана
 
 function mediaQuery() {
   if (window.matchMedia('(min-width: 1025px)').matches ) {
@@ -20,7 +16,6 @@ function mediaQuery() {
   }
 } 
 mediaQuery()
-console.log(screenWidth)
 
 const swiper = new Swiper('.swiper', {
   // цикличность слайдераа
@@ -42,4 +37,4 @@ const swiper = new Swiper('.swiper', {
   spaceBetween: screenWidth, // расстояние между слайдами
   // курсор - рука
   grabCursor: true,
-});
+})

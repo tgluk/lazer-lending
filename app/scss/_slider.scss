@@ -24,6 +24,17 @@
           }
         }
       }
+      .swiper-button-prev,.swiper-button-next { 
+        width: 40px;
+        height: 40px;
+        background-color: $color-prime;
+        color: #fff;
+        border-radius: 50%;
+
+        &::after {
+          font-size: 1.2em;
+        }
+      }
     }
   }
 }
