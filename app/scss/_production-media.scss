@@ -1,0 +1,20 @@
+@include tablet {
+  .production {
+    .wrapper {
+      .production__title {
+      }
+      .tabs {
+        &__head {
+          flex-direction: column;
+          .tabs__title {
+            display: none;
+            &--active {
+              display: block;
+
+            }
+          }
+        }
+      }
+    }
+  }
+}
