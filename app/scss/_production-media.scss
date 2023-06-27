@@ -5,13 +5,39 @@
       }
       .tabs {
         &__head {
+          border-radius: 4px;
           flex-direction: column;
           .tabs__title {
-            display: none;
+            // display: none;
             &--active {
-              display: block;
+              // display: block;
 
             }
+            &:first-child {
+              border-radius: 4px 4px 0 0;
+            }
+            &:last-child {
+              border-radius: 0 0 4px 4px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@include mobile {
+  .production {
+    .wrapper {
+      .production__title {
+      }
+      .tabs {
+        &__head {
+          border-radius: 4px;
+          flex-direction: column;
+          .tabs__title {
+            font-size: 18px;
+            padding: 20px;
           }
         }
       }

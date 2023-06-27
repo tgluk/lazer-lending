@@ -64,8 +64,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     head.addEventListener('click', e => {
       const caption = e.target.closest('.tabs__title')
-      // if (!caption) return
-      // if (caption.classList.contains('tabs__title--active')) return
+      if (!caption) return
+      if (!tabletWindow && caption.classList.contains('tabs__title--active')) return
 
       if (head.querySelector('.tabs__title--active')) {
         head.querySelector('.tabs__title--active').classList.remove('tabs__title--active')
@@ -77,11 +77,14 @@ document.addEventListener('DOMContentLoaded', () => {
       // console.log(true)
 
       // if (tabletWindow) {
-      //   // console.log(true)
+      //   console.log(true)
       //   let headTitles = [...document.querySelectorAll('.tabs__title')]
-      //   headTitles.map(title => {
+      //   headTitles.forEach(title => {
       //     // console.log(true)
       //     title.style.display = 'block'
+      //     if (!title.classList.contains('tabs__title--active')) {
+      //       // title.style.display = 'none'
+      //     }
       //     // title.addEventListener('click', e => {
       //     //   title.style.display = 'none'
       //     // })
@@ -92,19 +95,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
   tabs()
 
-  if (tabletWindow) {
-    const head = document.querySelector('.tabs__head')
-    head.addEventListener('click', e => {
-      let headTitles = [...document.querySelectorAll('.tabs__title')]
-      headTitles.map(title => {
-        if (window.getComputedStyle(title,null).getPropertyValue("display") == 'block') {
-          title.style.display = 'none'
-        } else {
-          title.style.display = 'block'
-        }
-        // console.log(window.getComputedStyle(title,null).getPropertyValue("display"))
-      })
-      console.log(true)
-    })
-  }
+  // if (tabletWindow) {
+  //   const head = document.querySelector('.tabs__head')
+  //   head.addEventListener('click', e => {
+  //     let headTitles = [...document.querySelectorAll('.tabs__title')]
+  //     headTitles.map(title => {
+  //       if (window.getComputedStyle(title,null).getPropertyValue("display") == 'block') {
+  //         title.style.display = 'none'
+  //       } else {
+  //         title.style.display = 'block'
+  //       }
+  //       // console.log(window.getComputedStyle(title,null).getPropertyValue("display"))
+  //     })
+  //     console.log(true)
+  //   })
+  // }
 }) 
