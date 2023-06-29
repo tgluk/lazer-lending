@@ -1,3 +1,17 @@
+@include laptop {
+  .header {
+    .wrapper {
+      .contacts {
+        &__wrap {
+          .contacts__link {
+            font-size: 20px;
+          }
+        }
+      }
+    }
+  }
+}
+
 @include tablet {
   .header {
     .wrapper {
