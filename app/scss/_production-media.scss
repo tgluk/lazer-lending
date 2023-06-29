@@ -1,8 +1,8 @@
 @include tablet {
   .production {
     .wrapper {
-      .production__title {
-      }
+      // .production__title {
+      // }
       .tabs {
         &__head {
           border-radius: 4px;
@@ -18,6 +18,33 @@
             }
             &:last-child {
               border-radius: 0 0 4px 4px;
+            }
+          }
+        }
+        &__body {
+          .tabs__content {
+            
+            .wrap { 
+              flex-direction: column;
+              .content__logo {
+                display: flex;
+                justify-content: center;
+                width: 100%;
+                // .logo__img {
+                //   width: 50%;
+                // }
+              }
+              .conten__desc {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                // justify-content: center;
+                width: 100%;
+              }
+            }
+            .infoblocks {
+              flex-wrap: wrap;
+              gap: 0;
             }
           }
         }
