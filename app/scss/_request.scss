@@ -1,0 +1,75 @@
+.request {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 40px 20px;
+    .request__title {
+      font-size: 46px;
+      font-family: $oswald;
+      line-height: 1.50;
+      font-weight: 400;
+    }
+    .request__subtitle {
+      color: #ffffff;
+      font-size: 18px;
+      font-family: $roboto;
+      line-height: 1.56;
+      font-weight: 400;
+      opacity: 0.8;
+    }
+    .form {
+      display: flex;
+      // flex-wrap: wrap;
+      gap: 60px;
+      margin-top: 50px;
+      &__input {
+        color: rgba(255, 255, 255, 0.7);
+        font-size: 16px;
+        font-family: $roboto;
+        width: 25%;
+        padding: 20px;
+        padding-left: 0;
+        line-height: 1.33;
+        border: 0;
+        border-bottom: 1px solid #fff;
+        background: transparent;
+      }
+      &__submit {
+        color: #fff;
+        border: 2px solid #fff;
+        border-radius: 4px;
+        font-family: $oswald;
+        font-weight: 500;
+        text-transform: uppercase;
+        background-color: transparent;
+        font-size: 16px;
+        cursor: pointer;
+        padding-left: 60px;
+        padding-right: 60px;
+        transition: all 0.4s ease-in-out;
+        &:hover {
+          border: 2px solid $color-prime;
+          background-color: $color-prime;
+        }
+        &:focus {
+          background-color: $color-prime;
+        }
+      }
+    }
+    .request__rules {
+      margin-top: 30px;
+      font-family: $roboto;
+      font-weight: 400;
+      color: #fff;
+      font-size: 14px;
+      opacity: 0.8;
+      line-height: 1.55;
+    }
+  }
+}
