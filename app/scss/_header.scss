@@ -42,6 +42,7 @@
             color: #fff;
             font-family: $roboto;
             transition: all 0.2s ease-out;
+            white-space: nowrap;
             &:hover {
               color: $color-prime;
             }

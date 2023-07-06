@@ -50,11 +50,12 @@
         }
         &__desc {
           color: #ffffff;
-          font-size: 16px;
+          font-size: 18px;
           font-family: $roboto;
           line-height: 1.50;
           font-weight: 400;
           margin: 0;
+          text-transform: uppercase;
         }
       }
     }
