@@ -57,6 +57,13 @@
 @include mobile {
   .header {
     .wrapper {
+      .logo {
+        min-width: 150px;
+        width: 150px;
+        &__img {
+          width: 100%;
+        }
+      }
       .nav {
         flex-grow: 0;
         flex-direction: column;
