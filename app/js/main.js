@@ -74,40 +74,47 @@ document.addEventListener('DOMContentLoaded', () => {
       caption.classList.add('tabs__title--active')
 
       setActiveContent(getActiveTabName())
-      // console.log(true)
-
-      // if (tabletWindow) {
-      //   console.log(true)
-      //   let headTitles = [...document.querySelectorAll('.tabs__title')]
-      //   headTitles.forEach(title => {
-      //     // console.log(true)
-      //     title.style.display = 'block'
-      //     if (!title.classList.contains('tabs__title--active')) {
-      //       // title.style.display = 'none'
-      //     }
-      //     // title.addEventListener('click', e => {
-      //     //   title.style.display = 'none'
-      //     // })
-      //   })
-      // }
     })
   }
 
   tabs()
+})
 
-  // if (tabletWindow) {
-  //   const head = document.querySelector('.tabs__head')
-  //   head.addEventListener('click', e => {
-  //     let headTitles = [...document.querySelectorAll('.tabs__title')]
-  //     headTitles.map(title => {
-  //       if (window.getComputedStyle(title,null).getPropertyValue("display") == 'block') {
-  //         title.style.display = 'none'
-  //       } else {
-  //         title.style.display = 'block'
-  //       }
-  //       // console.log(window.getComputedStyle(title,null).getPropertyValue("display"))
-  //     })
-  //     console.log(true)
-  //   })
-  // }
-}) 
+/* burger animated */
+
+const button = document.querySelector('.burger');
+const burger = document.querySelector('.burger-btn');
+const list = document.querySelector('.list');
+const nav = document.querySelector('.nav');
+
+button.addEventListener('click', () => {
+  if (burger.classList.contains('active')) {
+    burger.classList.remove('active');
+    list.classList.remove('list_active');
+  } else {
+    burger.classList.toggle('active');
+    list.classList.toggle('list_active');
+    // headerBlock.classList.add('header__block1-wrapper_fixed');
+  }
+});
+
+/* Контакты в меню */
+
+if (window.matchMedia('(max-width: 540px)').matches) {
+  const contacts = document.createElement('li')
+  contacts.classList.add('contacts-visible')
+  // contacts.innerHTML = '<div>"K:LK":LKg;kjsdf;lkjglj</div>'
+  contacts.innerHTML = `
+    <div class="contacts__wrap">
+      <a href="tel:88007071120" class="contacts__link contacts__link--tel">8 800 707 11 20</a>
+      <a href="tel:+79512084892" class="contacts__link contacts__link--tel">8 951 208 48 92</a>
+      <a href="mailto:amada18@mail.ru" class="contacts__link contacts__link--mail">amada18@mail.ru</a>
+    </div>
+    <div class="contacts__icons icons">
+      <a href="#" class="icons__link"><img class="icons__img" src="./assets/images/icons/telegram.png" alt="telegram"></a>
+      <a href="#" class="icons__link"><img class="icons__img" src="./assets/images/icons/whatsapp.png" alt="whatsapp"></a>
+    </div>
+  `
+  list.appendChild(contacts)
+  console.log(contacts)
+}

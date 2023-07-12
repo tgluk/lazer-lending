@@ -40,7 +40,7 @@
             }
           }
 
-          &--active {
+          &_active {
             opacity: 1;
             visibility: visible;
             transform: translate(0);
@@ -50,12 +50,6 @@
       .contacts {
         flex-grow: 2;
       }
-      .burger {
-        display: block;
-        padding-left: 20px;
-        fill: #fff;
-        cursor: pointer;
-      }
     }
   }
 }
@@ -63,9 +57,29 @@
 @include mobile {
   .header {
     .wrapper {
+      .nav {
+        flex-grow: 0;
+        flex-direction: column;
+        .list {
+          box-sizing: border-box;
+          width: 100vw;
+          align-items: center;
+          
+        }
+      }
       justify-content: space-between;
       .contacts {
         display: none;
+      }
+      .contacts-visible {
+        flex-direction: column;
+        gap: 30px;
+        .contacts__wrap {
+          align-items: center;
+        }
+        .icons {
+          flex-direction: row;
+        }
       }
     }
   }
