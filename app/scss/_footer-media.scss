@@ -1,0 +1,19 @@
+@include tablet {
+  .footer {
+    .wrapper {
+      flex-wrap: wrap;
+      // justify-content: center;
+      .footer__nav {
+        display: none;
+      }
+    }
+  }
+}
+
+@include mobile {
+  .footer {
+    .wrapper {
+      justify-content: center;
+    }
+  }
+}
