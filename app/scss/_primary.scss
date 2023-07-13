@@ -27,17 +27,18 @@
       border-radius: 4px;
       max-width: 690px;
       width: 100%;
-      padding: 50px 60px;
+      padding: 30px 40px;
       box-sizing: border-box;
       background-color: $background-opacity;
 
       &__title {
         margin: 20px 0;
-        font-size: 54px;
-        line-height: 1.50;
+        font-size: 50px;
+        line-height: 1.20;
         font-weight: 500;
         color: #fff;
         font-family: $oswald;
+        margin-top: 0;
       }
 
       &__subtitle {
