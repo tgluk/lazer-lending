@@ -100,21 +100,37 @@ button.addEventListener('click', () => {
 
 /* Контакты в меню */
 
-if (window.matchMedia('(max-width: 540px)').matches) {
-  const contacts = document.createElement('li')
-  contacts.classList.add('contacts-visible')
-  // contacts.innerHTML = '<div>"K:LK":LKg;kjsdf;lkjglj</div>'
-  contacts.innerHTML = `
-    <div class="contacts__wrap">
-      <a href="tel:88007071120" class="contacts__link contacts__link--tel">8 800 707 11 20</a>
-      <a href="tel:+79512084892" class="contacts__link contacts__link--tel">8 951 208 48 92</a>
-      <a href="mailto:amada18@mail.ru" class="contacts__link contacts__link--mail">amada18@mail.ru</a>
-    </div>
-    <div class="contacts__icons icons">
-      <a href="#" class="icons__link"><img class="icons__img" src="./assets/images/icons/telegram.png" alt="telegram"></a>
-      <a href="#" class="icons__link"><img class="icons__img" src="./assets/images/icons/whatsapp.png" alt="whatsapp"></a>
-    </div>
-  `
-  list.appendChild(contacts)
-  console.log(contacts)
+const contacts = document.createElement('li')
+
+const getContacts = () => {
+  if (window.matchMedia('(max-width: 540px)').matches) {
+    contacts.classList.add('contacts-visible')
+    contacts.innerHTML = `
+      <div class="contacts__wrap">
+        <a href="tel:88007071120" class="contacts__link contacts__link--tel">8 800 707 11 20</a>
+        <a href="tel:+79512084892" class="contacts__link contacts__link--tel">8 951 208 48 92</a>
+        <a href="mailto:amada18@mail.ru" class="contacts__link contacts__link--mail">amada18@mail.ru</a>
+      </div>
+      <div class="contacts__icons icons">
+        <a href="#" class="icons__link"><img class="icons__img" src="./assets/images/icons/telegram.png" alt="telegram"></a>
+        <a href="#" class="icons__link"><img class="icons__img" src="./assets/images/icons/whatsapp.png" alt="whatsapp"></a>
+      </div>
+    `
+    list.appendChild(contacts)
+    console.log(true)
+  }
 }
+getContacts()
+
+window.addEventListener("resize", (e) => {
+  e.preventDefault
+  if (window.innerWidth <= 540 && document.querySelector('.contacts-visible') == null ){
+    getContacts()
+    console.log(true)
+  }
+
+  if (window.innerWidth > 540) {
+    contacts?.remove();
+    console.log(false)
+  }
+});
