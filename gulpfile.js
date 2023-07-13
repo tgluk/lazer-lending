@@ -71,6 +71,9 @@ function build() {
       "app/js/**/*.min.js",
       "app/**/*.html",
       "app/images/dest/**/*",
+      "app/manifest.webmanifest",
+      "app/*.png",
+      "app/*.ico",
     ],
     { base: "app" }
   ).pipe(dest("dist"));
