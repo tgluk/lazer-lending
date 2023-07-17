@@ -4,7 +4,7 @@
   flex-direction: row;
   justify-content: center;
   width: 100%;
-  padding: 20px 0;
+  padding: 10px 0;
   background-color: $background-opacity;
   z-index: 99;
 
@@ -19,7 +19,7 @@
     .logo {
       display: flex;
       align-items: center;
-      min-width: 230px;
+      min-width: 180px;
       &__img {
         width: 100%;
       }
@@ -68,7 +68,7 @@
           // text-decoration: none;
           color: #fff;
           font-family: $roboto;
-          font-size: 24px;
+          font-size: 20px;
           line-height: 1.5;
           font-weight: 500;
           transition: all 0.2s ease-out;
@@ -76,6 +76,9 @@
 
           &:hover {
             color: $color-prime;
+          }
+          &--tel {
+            font-size: 20px;
           }
           &--mail {
             font-size: 16px;
