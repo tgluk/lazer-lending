@@ -1,5 +1,5 @@
 .header {
-  position: fixed;
+  position: absolute;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -7,6 +7,26 @@
   padding: 10px 0;
   background-color: $background-opacity;
   z-index: 99;
+  transition: all 0.2s ease-out;
+
+  &_fixed {
+    position: fixed;
+    background-color: $background;
+    animation: 0.5s ease header-visible;
+  }
+
+  @keyframes header-visible {
+    from {
+      transform: translateY(-100%);
+    }
+    to {
+      transform: translateY(0px);
+    }
+  }
+
+  // &_hidden {
+  //   position: absolute;
+  // }
 
   .wrapper {
     display: flex;
