@@ -1,7 +1,5 @@
 // slider
 
-// const { active } = require("browser-sync")
-
 let screenWidth; // переменная для расстояния между слайдами в зависимости от размера экрана
 const mediaQuery = () => {
   if (window.matchMedia("(min-width: 1025px)").matches) {
@@ -154,29 +152,47 @@ window.addEventListener("resize", (e) => {
 
 /* Header скролл */
 
-// const nav = document.querySelector('.navigation');
 const header = document.querySelector(".header");
 let prevScrollpos = window.pageYOffset;
-// var rect = header.getBoundingClientRect();
 
 window.addEventListener("scroll", () => {
   let currentScrollPos = window.pageYOffset;
   if (prevScrollpos > currentScrollPos) {
     header.classList.add("header_fixed");
-    // header.classList.remove('header_hidden');
   } else {
     header.classList.remove("header_fixed");
   }
   prevScrollpos = currentScrollPos;
 
-  // if (window.pageYOffset >= 200) {
-  //   header.classList.add('header_hidden');
-  // }
-
   if (window.pageYOffset <= 5) {
-    // header.classList.remove('header_hidden');
     header.classList.remove("header_fixed");
   }
-
-  // console.log(currentScrollPos);
 });
+
+/* Modal */
+
+const buttonModal = document.querySelector(".content__button");
+const modal = document.querySelector(".modal");
+const close = document.querySelector(".pop-up__diss");
+
+const openModal = () => {
+  if (modal.classList.contains("modal_active")) {
+    modal.classList.remove("modal_active");
+  } else {
+    modal.classList.toggle("modal_active");
+    document.body.style.overflow = "hidden";
+  }
+};
+
+const closeModal = (e) => {
+  if (
+    e.target.classList.contains("pop-up__diss") ||
+    e.target.classList.contains("modal")
+  ) {
+    modal.classList.remove("modal_active");
+    document.body.style.overflow = "visible";
+  }
+};
+
+buttonModal.addEventListener("click", () => openModal());
+modal.addEventListener("click", (e) => closeModal(e));

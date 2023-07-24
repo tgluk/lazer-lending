@@ -27,13 +27,11 @@
           right: 0;
           opacity: 0;
           visibility: hidden;
-          transform: translate(200px, 100px);
           transition: all 0.3s ease-in-out;
           background-color: $background;
           margin: 0;
           padding: 150px 30px;
           z-index: -1;
-
           &__item {
             .list__link {
               font-size: 22px;
@@ -41,9 +39,19 @@
           }
 
           &_active {
+            animation-name: menu;
+            animation-duration: 0.2s;
             opacity: 1;
             visibility: visible;
-            transform: translate(0);
+          }
+
+          @keyframes menu {
+            from {
+              transform: translate(200px, 100px);
+            }
+            to {
+              transform: translate(0);
+            }
           }
         }
       }

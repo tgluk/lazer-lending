@@ -1,0 +1,90 @@
+.modal {
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(18, 20, 24, 0.7);
+  backdrop-filter: blur(5px);
+  transition: all 0.4s ease-in-out;
+  transform: scale(0);
+  opacity: 0;
+  visibility: hidden;
+  &_active {
+    transform: scale(1);
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .pop-up {
+    position: relative;
+    box-sizing: border-box;
+    max-width: 440px;
+    width: 100%;
+    height: 450px;
+    margin: 0 10px;
+    background-color: $background;
+    border-radius: 4px;
+    padding: 30px;
+
+    &__title {
+      font-size: 24px;
+      font-family: $oswald;
+      font-weight: 400;
+    }
+    &__form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+      &-input {
+        color: rgba(255, 255, 255, 0.7);
+        font-size: 16px;
+        font-family: $roboto;
+        width: 100%;
+        padding: 20px;
+        // padding-left: 0;
+        padding-right: 0;
+        line-height: 1.33;
+        border: 0;
+        border-bottom: 1px solid #fff;
+        background: transparent;
+        box-sizing: border-box;
+      }
+      &-submit {
+        color: #fff;
+        border: 2px solid #fff;
+        border-radius: 4px;
+        font-family: $oswald;
+        font-weight: 500;
+        text-transform: uppercase;
+        background-color: transparent;
+        font-size: 16px;
+        cursor: pointer;
+        margin-top: 50px;
+        padding: 20px;
+        width: 250px;
+        transition: all 0.4s ease-in-out;
+        &:hover {
+          border: 2px solid $color-prime;
+          background-color: $color-prime;
+        }
+        &:focus {
+          background-color: $color-prime;
+        }
+      }
+    }
+    &__diss {
+      position: absolute;
+      top: 0;
+      right: 0;
+      display: inline-block;
+      font-size: 40px;
+      transform: rotate(45deg) translate(-10px, 20px);
+      cursor: pointer;
+      user-select: none;
+    }
+  }
+}
