@@ -22,26 +22,26 @@
 <body>
   <header class="header">
     <div class="wrapper">
-      <div class="logo">
+      <a href="#" class="logo" id="logo">
         <img src="./assets/images/logo1.png" alt="logo" class="logo__img">
-      </div>
+      </a>
       <nav class="nav">
         <ul class="list">
-          <li class="list__item"><a href="#" class="list__link">О производстве</a></li>
-          <li class="list__item"><a href="#" class="list__link">Услуги</a></li>
-          <li class="list__item"><a href="#" class="list__link">Контакты</a></li>
+          <li class="list__item"><a href="#services" class="list__link">Услуги</a></li>
+          <li class="list__item"><a href="#production" class="list__link">О производстве</a></li>
+          <li class="list__item"><a href="#contacts" class="list__link">Контакты</a></li>
         </ul>
       </nav>
       <div class="contacts">
+        <div class="contacts__icons icons">
+          <!-- <a href="#" class="icons__link"><img class="icons__img" src="./assets/images/icons/telegram.png"
+              alt="telegram"></a> -->
+          <a href="https://wa.me/+79511926176" target="_blank" class="icons__link"><img class="icons__img" src="./assets/images/icons/whatsapp.png"
+              alt="whatsapp"></a>
+        </div>
         <div class="contacts__wrap">
           <a href="tel:+79512084892" class="contacts__link contacts__link--tel">8 951 208 48 92</a>
           <a href="mailto:amada18@mail.ru" class="contacts__link contacts__link--mail">amada18@mail.ru</a>
-        </div>
-        <div class="contacts__icons icons">
-          <a href="#" class="icons__link"><img class="icons__img" src="./assets/images/icons/telegram.png"
-              alt="telegram"></a>
-          <a href="#" class="icons__link"><img class="icons__img" src="./assets/images/icons/whatsapp.png"
-              alt="whatsapp"></a>
         </div>
       </div>
       <div class="burger">
@@ -108,7 +108,7 @@
         </div>
       </div>
     </section>
-    <section class="services">
+    <section class="services" id="services">
       <div class="wrapper">
         <h2 class="services__title">Основные виды услуг</h2>
         <div class="service-container">
@@ -198,7 +198,7 @@
         </div>
       </div>
     </section>
-    <section class="production">
+    <section class="production" id="production">
       <div class="wrapper">
         <h2 class="production__title">О производстве</h2>
         <div class="production__tabs tabs">
@@ -323,7 +323,7 @@
         </form>
       </div>
     </section>
-    <section class="contacts">
+    <section class="contacts" id="contacts">
       <div class="wrapper">
         <h2 class="contacts__title">Наши контакты</h2>
         <div class="contacts__adress-box adress-box">
@@ -335,6 +335,7 @@
           <p class="contact-us__desc">Готовы ответить на ваши вопросы и помочь вам!<br> Не стесняйтесь обращаться к нам.
             Ждем ваших звонков, писем и сообщений.
           </p>
+          <button class="contacts__button content__button">оставить заявку</button>
           <div class="contact-us__wrap">
             <a href="tel:+79512084892" class="contact-us__link">8 951 208 48 92</a>
             <a href="tel:88007071120" class="contact-us__link">8 800 707 11 20</a>
@@ -346,26 +347,26 @@
   </main>
   <footer class="footer">
     <div class="wrapper">
-      <div class="footer__logo logo">
+      <a class="footer__logo logo" href="#">
         <img src="./assets/images/logo1.png" alt="logo" class="logo__img">
-      </div>
+      </a>
       <nav class="footer__nav nav">
         <ul class="nav__list list">
-          <li class="list__item"><a href="#" class="list__link">О производстве</a></li>
-          <li class="list__item"><a href="#" class="list__link">Услуги</a></li>
-          <li class="list__item"><a href="#" class="list__link">Контакты</a></li>
+          <li class="list__item"><a href="#services" class="list__link">Услуги</a></li>
+          <li class="list__item"><a href="#production" class="list__link">О производстве</a></li>
+          <li class="list__item"><a href="#contacts" class="list__link">Контакты</a></li>
         </ul>
       </nav>
       <div class="footer__contacts">
+        <div class="contacts__icons icons">
+          <!-- <a href="#" class="icons__link"><img class="icons__img" src="./assets/images/icons/telegram.png"
+              alt="telegram"></a> -->
+          <a href="https://wa.me/+79511926176" target="_blank" class="icons__link"><img class="icons__img" src="./assets/images/icons/whatsapp.png"
+              alt="whatsapp"></a>
+        </div>
         <div class="contacts__wrap">
           <a href="tel:+79512084892" class="contacts__link contacts__link--tel">8 951 208 48 92</a>
           <a href="mailto:amada18@mail.ru" class="contacts__link contacts__link--mail">amada18@mail.ru</a>
-        </div>
-        <div class="contacts__icons icons">
-          <a href="#" class="icons__link"><img class="icons__img" src="./assets/images/icons/telegram.png"
-              alt="telegram"></a>
-          <a href="#" class="icons__link"><img class="icons__img" src="./assets/images/icons/whatsapp.png"
-              alt="whatsapp"></a>
         </div>
       </div>
     </div>
