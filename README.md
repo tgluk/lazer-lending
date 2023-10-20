@@ -4,5 +4,5 @@
 <https://timgluk.github.io/lazer-lending/>
 
 ### Что бы запустить проект:
-npm i
-gulp
+1. npm i
+2. gulp
