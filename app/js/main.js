@@ -105,8 +105,10 @@ button.addEventListener("click", () => {
 
   if (burger.classList.contains("active")) {
     document.body.style.overflow = "hidden";
+    // document.body.style.position = "fixed";
   } else {
     document.body.style.overflow = "visible";
+    // document.body.style.position = "static";
   }
 });
 
@@ -124,12 +126,11 @@ const getContacts = () => {
         <a href="mailto:amada18@mail.ru" class="contacts__link contacts__link--mail">amada18@mail.ru</a>
       </div>
       <div class="contacts__icons icons">
-        <a href="#" class="icons__link"><img class="icons__img" src="./assets/images/icons/telegram.png" alt="telegram"></a>
-        <a href="#" class="icons__link"><img class="icons__img" src="./assets/images/icons/whatsapp.png" alt="whatsapp"></a>
+      <a href="https://wa.me/+79511926176" target="_blank" class="icons__link"><img class="icons__img" src="./assets/images/icons/whatsapp.png"
+      alt="whatsapp"></a>
       </div>
     `;
     list.appendChild(contacts);
-    // console.log(true)
   }
 };
 getContacts();
@@ -141,12 +142,10 @@ window.addEventListener("resize", (e) => {
     document.querySelector(".contacts-visible") == null
   ) {
     getContacts();
-    // console.log(true)
   }
 
   if (window.innerWidth > 540) {
     contacts?.remove();
-    // console.log(false)
   }
 });
 
@@ -171,9 +170,8 @@ window.addEventListener("scroll", () => {
 
 /* Modal */
 
-const buttonModal = document.querySelector(".content__button");
-const modal = document.querySelector(".modal");
-const close = document.querySelector(".pop-up__diss");
+const buttonModals = [...document.querySelectorAll(".content__button")]
+const modal = document.querySelector(".modal")
 
 const openModal = () => {
   if (modal.classList.contains("modal_active")) {
@@ -194,5 +192,8 @@ const closeModal = (e) => {
   }
 };
 
-buttonModal.addEventListener("click", () => openModal());
+buttonModals.map(buttonModal => buttonModal.addEventListener("click", () => {
+  openModal()
+}));
+
 modal.addEventListener("click", (e) => closeModal(e));
