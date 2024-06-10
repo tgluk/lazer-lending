@@ -44,3 +44,14 @@
     }
   }
 }
+
+@media (max-width: 540px) and (orientation: landscape) {
+  .primary {
+    .wrapper {
+      margin: 0 20px;
+      .content {
+        margin-top: 150px;
+      }
+    }
+  }
+}
