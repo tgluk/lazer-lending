@@ -66,8 +66,8 @@
   .header {
     .wrapper {
       .logo {
-        min-width: 150px;
-        width: 150px;
+        // min-width: 100px;
+        width: 100px;
         &__img {
           width: 100%;
         }
@@ -79,7 +79,9 @@
           box-sizing: border-box;
           width: 100vw;
           align-items: center;
-          
+          &__contacts {
+            display: flex;
+          }
         }
       }
       justify-content: space-between;
@@ -87,6 +89,7 @@
         display: none;
       }
       .contacts-visible {
+        display: flex;
         flex-direction: column;
         gap: 30px;
         .contacts__wrap {

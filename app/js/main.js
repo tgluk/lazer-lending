@@ -114,23 +114,28 @@ button.addEventListener("click", () => {
 
 /* Контакты в меню */
 
-const contacts = document.createElement("li");
+// const contacts = document.createElement("li");
+const contacts = document.querySelector(".list__contacts");
 
 const getContacts = () => {
   if (window.matchMedia("(max-width: 540px)").matches) {
-    contacts.classList.add("contacts-visible");
-    contacts.innerHTML = `
-      <div class="contacts__wrap">
-        <a href="tel:88007071120" class="contacts__link contacts__link--tel">8 800 707 11 20</a>
-        <a href="tel:+79512084892" class="contacts__link contacts__link--tel">8 951 208 48 92</a>
-        <a href="mailto:amada18@mail.ru" class="contacts__link contacts__link--mail">amada18@mail.ru</a>
-      </div>
-      <div class="contacts__icons icons">
-      <a href="https://wa.me/+79511926176" target="_blank" class="icons__link"><img class="icons__img" src="./assets/images/icons/whatsapp.png"
-      alt="whatsapp"></a>
-      </div>
-    `;
-    list.appendChild(contacts);
+    if (contacts.classList.contains("contacts-visible")) {
+      contacts.classList.remove("contacts-visible");
+    } else {
+      contacts.classList.add("contacts-visible");
+    }
+    // contacts.innerHTML = `
+    //   <div class="contacts__wrap">
+    //     <a href="tel:88007071120" class="contacts__link contacts__link--tel">8 800 707 11 20</a>
+    //     <a href="tel:+79512084892" class="contacts__link contacts__link--tel">8 951 208 48 92</a>
+    //     <a href="mailto:amada18@mail.ru" class="contacts__link contacts__link--mail">amada18@mail.ru</a>
+    //   </div>
+    //   <div class="contacts__icons icons">
+    //   <a href="https://wa.me/+79511926176" target="_blank" class="icons__link"><img class="icons__img" src="./assets/images/icons/whatsapp.png"
+    //   alt="whatsapp"></a>
+    //   </div>
+    // `;
+    // list.appendChild(contacts);
   }
 };
 getContacts();
@@ -170,8 +175,8 @@ window.addEventListener("scroll", () => {
 
 /* Modal */
 
-const buttonModals = [...document.querySelectorAll(".content__button")]
-const modal = document.querySelector(".modal")
+const buttonModals = [...document.querySelectorAll(".content__button")];
+const modal = document.querySelector(".modal");
 
 const openModal = () => {
   if (modal.classList.contains("modal_active")) {
@@ -192,8 +197,10 @@ const closeModal = (e) => {
   }
 };
 
-buttonModals.map(buttonModal => buttonModal.addEventListener("click", () => {
-  openModal()
-}));
+buttonModals.map((buttonModal) =>
+  buttonModal.addEventListener("click", () => {
+    openModal();
+  })
+);
 
 modal.addEventListener("click", (e) => closeModal(e));

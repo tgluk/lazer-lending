@@ -15,11 +15,10 @@
     width: 100%;
     margin: 0 20px;
     .footer__logo {
-      display: flex;
-      align-items: center;
-      max-width: 200px;
+      max-width: 80px;
       .logo__img {
         width: 100%;
+        object-fit: contain;
       }
     }
     .footer__nav {
@@ -81,6 +80,7 @@
           height: 40px;
           .icons__img {
             width: 100%;
+            filter: invert(1);
           }
         }
       }

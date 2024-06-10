@@ -38,16 +38,16 @@
     margin: 0 20px;
 
     .logo {
-      display: flex;
-      align-items: center;
-      min-width: 180px;
+      max-width: 80px;
       &__img {
         width: 100%;
+        object-fit: contain;
       }
     }
 
     .nav {
       display: flex;
+      justify-content: center;
       flex-grow: 2;
 
       .list {
@@ -55,10 +55,14 @@
         flex-direction: row;
         list-style-type: none;
         gap: 35px;
+        &__contacts {
+          display: none;
+        }
         &__item {
 
           .list__link {
             text-decoration: none;
+            text-transform: uppercase;
             color: #fff;
             font-family: $roboto;
             transition: all 0.2s ease-out;
@@ -70,17 +74,19 @@
         }
       }
     }
-    .contacts,.contacts-visible {
+    .contacts,
+    .contacts-visible {
       display: flex;
       flex-direction: row;
       align-items: center;
       justify-content: flex-end;
       gap: 20px;
       margin-bottom: 0;
+      width: auto;
       &__wrap {
         display: flex;
         flex-direction: column;
-        align-items: flex-end;
+        // align-items: flex-end;
         gap: 10px;
 
         // height: 100%;
@@ -109,13 +115,15 @@
       }
       .icons {
         display: flex;
-        flex-direction: column;
+        // flex-direction: column;
         gap: 10px;
         &__link {
           width: 40px;
           height: 40px;
           .icons__img {
             width: 100%;
+            filter: invert(1);
+            fill:  black;
           }
         }
       }
